@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct BrewHavenApp: App {
+    @StateObject private var cartManager = CartManager()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(cartManager)
         }
     }
 }
